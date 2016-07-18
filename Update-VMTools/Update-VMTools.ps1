@@ -55,7 +55,7 @@ else {
 	Start-Sleep -s 7200
 	foreach ($myvm in $myvms) {
 		if ($myvm.PowerState -eq "PoweredOff") { 
-			Shutdown-VMGuest -VM $myvm.VM -Confirm:$false
+			Stop-VMGuest -VM $myvm.VM -Confirm:$false
 		}
 	}
 	
